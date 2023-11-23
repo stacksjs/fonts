@@ -1,0 +1,52 @@
+{
+    "name": "stacks-awesome-fonts",
+    "type": "module",
+    "version": "0.0.0",
+    "private": true,
+    "description": "A collection of awesome fonts.",
+    "author": "Chris Breuer <chris@stacksjs.org>",
+    "license": "MIT",
+    "funding": "https://github.com/sponsors/chrisbbreuer",
+    "homepage": "https://github.com/stacksjs/fonts#readme",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/stacksjs/fonts.git"
+    },
+    "bugs": {
+        "url": "https://github.com/stacksjs/fonts/issues"
+    },
+    "contributors": [
+        "Chris Breuer <chris@stacksjs.org>"
+    ],
+    "scripts": {
+        "build": "bun --bun build.ts",
+        "fresh": "rimraf node_modules/ bun.lock && bun i",
+        "commit": "git cz",
+        "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
+        "release": "bunx --bun bumpp package.json --all"
+    },
+    "devDependencies": {
+        "@antfu/eslint-config": "^2.1.0",
+        "@types/node": "^20.9.4",
+        "bun-types": "^1.0.14",
+        "bumpp": "^9.2.0",
+        "commitizen": "^4.3.0",
+        "conventional-changelog-cli": "^4.1.0",
+        "cz-git": "^1.7.1",
+        "eslint": "^8.54.0",
+        "lint-staged": "^15.1.0",
+        "rimraf": "^5.0.5",
+        "simple-git-hooks": "^2.9.0",
+        "typescript": "^5.3.2"
+    },
+    "config": {
+        "commitizen": {
+            "path": "node_modules/cz-git"
+        }
+    },
+    "workspaces": [
+        "hubot-sans/*",
+        "inter/*",
+        "mona-sans/*"
+    ]
+}
