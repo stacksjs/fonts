@@ -1,4 +1,4 @@
-![Social Card of Stacks](./.art/social.jpg)
+![Social Card of Stacks](./.github/art/social.jpg)
 
 # Fonts
 
