@@ -1,0 +1,23 @@
+{
+  "name": "open-runde",
+  "version": "1.0.1",
+  "description": "A soft, rounded variant of Inter.",
+  "license": "OFL-1.1",
+  "homepage": "https://github.com/lauridskern/open-runde/tree/main",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stacksjs/stacks.git",
+    "directory": "./open-runde"
+  },
+  "bugs": {
+    "url": "https://github.com/stacksjs/stacks/issues"
+  },
+  "keywords": [
+    "font",
+    "open runde",
+    "inter"
+  ],
+  "files": [
+    "src"
+  ]
+}

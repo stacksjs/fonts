@@ -5,6 +5,7 @@ A collection of pretty fonts.
 - [Inter](https://rsms.me/inter/)
 - [Hubot Sans](https://github.com/mona-sans)
 - [Mona Sans](https://github.com/mona-sans)
+- [Open Runde](https://github.com/lauridskern/open-runde/tree/main)
 
 ## 📈 Changelog
 
