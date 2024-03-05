@@ -1,5 +1,3 @@
-![Social Card of Stacks](./.github/art/social.jpg)
-
 # Fonts
 
 A collection of pretty fonts.
