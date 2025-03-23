@@ -26,7 +26,7 @@
         "release": "bunx --bun bumpp package.json --all"
     },
     "devDependencies": {
-        "@antfu/eslint-config": "^2.8.0",
+        "@antfu/eslint-config": "^4.11.0",
         "@types/node": "^20.11.24",
         "bun-types": "^1.0.30",
         "bumpp": "^10.1.0",
