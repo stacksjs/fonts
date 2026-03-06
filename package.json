@@ -1,52 +1,62 @@
 {
-    "name": "stacks-awesome-fonts",
-    "type": "module",
-    "version": "0.0.0",
-    "private": true,
-    "description": "A collection of awesome fonts.",
-    "author": "Chris Breuer <chris@stacksjs.org>",
-    "license": "MIT",
-    "funding": "https://github.com/sponsors/chrisbbreuer",
-    "homepage": "https://github.com/stacksjs/fonts#readme",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/stacksjs/fonts.git"
+  "name": "stacks-awesome-fonts",
+  "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "description": "A collection of awesome fonts.",
+  "author": "Chris Breuer <chris@stacksjs.org>",
+  "license": "MIT",
+  "funding": "https://github.com/sponsors/chrisbbreuer",
+  "homepage": "https://github.com/stacksjs/fonts#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stacksjs/fonts.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stacksjs/fonts/issues"
+  },
+  "contributors": [
+    "Chris Breuer <chris@stacksjs.org>"
+  ],
+  "scripts": {
+    "build": "bun --bun build.ts",
+    "fresh": "rimraf node_modules/ bun.lock && bun i",
+    "commit": "git cz",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
+    "release": "bunx --bun bumpp package.json --all",
+    "lint": "bunx --bun pickier .",
+    "lint:fix": "bunx --bun pickier . --fix",
+    "format": "bunx --bun pickier . --format",
+    "format:fix": "bunx --bun pickier . --format --write",
+    "postinstall": "bunx git-hooks"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.24",
+    "bun-types": "^1.0.30",
+    "bumpp": "^10.1.0",
+    "commitizen": "^4.3.0",
+    "conventional-changelog-cli": "^4.1.0",
+    "cz-git": "^1.9.0",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.3.3",
+    "bun-git-hooks": "^0.3.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-git"
+    }
+  },
+  "workspaces": [
+    "hubot-sans/*",
+    "inter/*",
+    "mona-sans/*"
+  ],
+  "git-hooks": {
+    "pre-commit": {
+      "staged-lint": {
+        "*.{js,ts,json,yaml,yml,md}": "bunx --bun pickier lint --fix"
+      }
     },
-    "bugs": {
-        "url": "https://github.com/stacksjs/fonts/issues"
-    },
-    "contributors": [
-        "Chris Breuer <chris@stacksjs.org>"
-    ],
-    "scripts": {
-        "build": "bun --bun build.ts",
-        "fresh": "rimraf node_modules/ bun.lock && bun i",
-        "commit": "git cz",
-        "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
-        "release": "bunx --bun bumpp package.json --all"
-    },
-    "devDependencies": {
-        "@antfu/eslint-config": "^4.11.0",
-        "@types/node": "^20.11.24",
-        "bun-types": "^1.0.30",
-        "bumpp": "^10.1.0",
-        "commitizen": "^4.3.0",
-        "conventional-changelog-cli": "^4.1.0",
-        "cz-git": "^1.9.0",
-        "eslint": "^8.57.0",
-        "lint-staged": "^15.2.2",
-        "rimraf": "^5.0.5",
-        "simple-git-hooks": "^2.10.0",
-        "typescript": "^5.3.3"
-    },
-    "config": {
-        "commitizen": {
-            "path": "node_modules/cz-git"
-        }
-    },
-    "workspaces": [
-        "hubot-sans/*",
-        "inter/*",
-        "mona-sans/*"
-    ]
+    "commit-msg": "bunx gitlint --edit .git/COMMIT_EDITMSG"
+  }
 }
