@@ -31,7 +31,7 @@
     "postinstall": "bunx git-hooks"
   },
   "devDependencies": {
-    "@types/node": "^20.11.24",
+    "@types/node": "^24.13.3",
     "bun-types": "^1.0.30",
     "bumpp": "^10.1.0",
     "commitizen": "^4.3.0",
