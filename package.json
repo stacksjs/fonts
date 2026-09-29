@@ -28,7 +28,7 @@
     "lint:fix": "bunx --bun pickier . --fix",
     "format": "bunx --bun pickier . --format",
     "format:fix": "bunx --bun pickier . --format --write",
-    "postinstall": "bunx git-hooks"
+    "postinstall": "bunx bun-git-hooks"
   },
   "devDependencies": {
     "@types/node": "^20.11.24",
